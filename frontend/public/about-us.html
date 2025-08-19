@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin:0 ;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .aboutus {
+            position: relative;
+            min-height: 100vh;
+            padding: 50px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url(./images/emoji.jpg);
+            background-size: cover;
+        }
+        .aboutus .content {
+            margin-top: -30px;
+            max-width: 800px;
+            text-align: center;
+        }
+        .aboutus .content h2 {
+            font-size: 40px;
+            font-weight: bolder;
+            color: rgb(175, 22, 48);
+            text-shadow: 2px 4px white;
+        }
+        .aboutus .content p {
+            font-weight: 400;
+            color: black;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .container .contactInfo {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .container .contactInfo .box {
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+        }
+        .container .contactInfo .box .icon {
+            min-width: 60px;
+            height: 60px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: palevioletred 3px solid;
+            font-size: 22px;
+        }
+        .container .contactInfo .box .text {
+            display: flex;
+            margin-left: 20px;
+            flex-direction: column;
+            font-size: 16px;
+            color: black;
+            font-weight: 400;
+        }
+        .container .contactInfo .box .text h3 {
+            font-weight: bold;
+            color: rgb(236, 17, 53);
+        }
+        .contactForm{
+            width: 40%;
+            padding: 40px;
+            background: white;
+        }
+        .contactForm h2{
+            font-size: 30px;
+            color: rgb(121, 61, 71);
+            font-weight: 500;
+        }
+        .contactForm .inputBox {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .contactForm .inputBox input,
+        .contactForm .inputBox textarea {
+            width: 100%;
+            padding: 5px 0;
+            border: none;
+            border-bottom: 2px solid rgb(121, 61, 71);
+            outline: none;
+            font-size: 16px;
+            margin: 10px 0;
+            resize: none;
+        }
+        .contactForm .inputBox span{
+            position: absolute;
+            left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            color: black
+        }
+        .contactForm .inputBox input:focus ~ span,
+        .contactForm .inputBox input:valid ~ span,
+        .contactForm .inputBox textarea:focus ~ span,
+        .contactForm .inputBox textarea:valid ~ span{
+            color: rgb(236, 17, 53);
+            font-size: 12px;
+            transform: translate(0, -20px);
+        }
+        .contactForm .inputBox input[type="submit"] {
+            width: 100px;
+            background: rgb(236, 17, 53);
+            color: white;
+            border: none;
+            padding: 10px ;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        @media (max-width: 991px) {
+            .aboutus{
+                padding: 50px;
+            }
+            .container {
+                flex-direction: column;
+            }
+            .container .contactInfo {
+                margin-bottom: 40px;
+            }
+            .container .contactInfo, 
+            .contactForm {
+               width: 100%;
+            }
+        }
+            
+
+
+    </style>
+
+  </head>
+  <body>
+    <section class="aboutus">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>At MindBloom, we believe every girl deserves to feel confident, balanced, and empowered. 
+                Our mission is to create a safe, supportive space where young women can nurture their minds, care for their bodies, and grow into the best version of themselves. Through wellness tips, self-care guidance, and inspiring resources, we aim to help you bloom with positivity, strength, and self-love — because your well-being matters every day. 🌸💖</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>No 71/4 Dinson street, <br>Kuruduwaththa, Colombo 7 <br>55562</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>091-234-5678</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>mindBloom5678Dinsion@gmai.com.net</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Type Your Message</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="send"></input>    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>

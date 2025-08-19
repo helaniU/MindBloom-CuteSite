@@ -1,0 +1,177 @@
+body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: #fff;
+        }
+        .back-arrow {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 2px solid black;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            z-index: 1000;
+            background: white;
+        }
+        .profile-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 2px solid black;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            z-index: 1000;
+            background: white;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+        .middle-content {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            position: relative;
+        }
+        .middle-content img {
+            width: 400px;
+            margin-bottom: 1em;
+            border-radius: 20px;
+        }
+        .title {
+            width: 500px;
+            color: #111;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            margin-left: 1em;
+            margin-bottom: 0.5em;
+        }
+        .tips-btn {
+            background: #4a90e2;
+            color: #fff;
+            border: 3px solid #2d5fa7;
+            border-radius: 15px;
+            padding: 0.5em;
+            font-size: 1.3em;
+            font-weight: bold;
+           
+            box-shadow: 0 0 10px #b3c6e7;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .tips-btn:hover {
+            background: #3571b8;
+            color: #fff;
+        }
+        .icon-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1em;
+        }
+        .icon-row img {
+            width: 70px;
+            margin-right: 1em;
+        }
+        .warm-drink-title {
+            color: #7d3c1c;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .warm-drink-desc {
+            color: #4a2a7a;
+            font-size: 1em;
+        }
+        .letsgo {
+            color: #4a90e2;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        .action-btn {
+            background: #8fd3f4;
+            color: #222;
+            border: none;
+            border-radius: 30px;
+            padding: 1rem;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            text-align: left;
+            box-shadow: 0 0 10px #b3c6e7;
+            cursor: pointer;
+            width: 80%;
+            max-width: 500px;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+        .action-btn:hover {
+            background: #4a90e2;
+            color: #fff;
+            box-shadow: 0 0 15px #4a90e2;
+            transform: scale(1.05);
+        }
+        .right-bg {
+            margin-left: -50px;
+            flex: 3;
+            background: url('/images/4.jpg') no-repeat center center;
+            background-size: 400px 100%; 
+            background-position: right;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 1; 
+            height:110vh;
+        }
+
+        .footer {
+            position: absolute;
+            width: 100%;
+            background: #b3c6e7;
+            color: #fff;
+            text-align: center;
+            padding: 0.5em 0;
+            font-size: 1em;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .footer-links {
+            font-size: 1.1em;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 1em;
+        }
+        .footer-copyright {
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+        .footer-social {
+            display: flex;
+            align-items: center;
+        }
+        .footer-social span {
+            margin-right: 0.5em;
+        }
+        .footer-social img {
+            height: 28px;
+            margin-left: 0.5em;
+        }

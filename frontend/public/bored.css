@@ -1,0 +1,160 @@
+body {
+            background: #7d5fc7;
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .back-arrow {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 2px solid black;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            z-index: 1000;
+            background: white;
+        }
+        .profile-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 2px solid black;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            z-index: 1000;
+            background: white;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .left-img {
+            margin-top: -50px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: fit-content;
+        }
+        .left-img img {
+            margin-top: 100px;
+            margin-left: 20px;
+            height: 600px;
+            border-radius: 20px;
+        }
+        .center-content {
+            margin-top: 100px;
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding-left: 2em;
+        }
+        .joke {
+            color: #71155a;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-shadow: 0 0 10px #fff;
+            
+        }
+        .joke-text {
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+         
+        }
+        .emoji {
+            font-size: 3em;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+        .try-title {
+            color: #5c2a6c;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+        .action-btn {
+            background: #a085c7;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px 10px 20px;
+            font-size: 1.5em;
+            margin-bottom: 1rem;
+            text-align: center;
+            box-shadow: 0 0 10px #634e98;
+            cursor: pointer;
+            width: 400px;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .action-btn:hover {
+            background: #5c2a6c;
+            color: #fff;
+            box-shadow: 0 0 15px #5c2a6c;
+            transform: scale(1.05);
+        }
+        .bored-title {
+            color: #2d0951;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px #b8a8be;
+           
+        }
+        .walk-text {
+            color: #fff;
+            font-size: 2em;
+            font-weight: bold;
+            
+        }
+        .footer {
+            margin-top: 100px;
+            position: absolute;
+            width: 100%;
+            background: rgba(164, 147, 206, 0.95);
+            color: #fff;
+            text-align: center;
+            padding: 0.5rem 0;
+            font-size: 1em;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .footer-links {
+            font-size: 1.1em;
+        }
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 1em;
+        }
+        .footer-copyright {
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+        .footer-social {
+            display: flex;
+            align-items: center;
+        }
+        .footer-social span {
+            margin-right: 0.5em;
+            font-size: 1.2rem;
+        }
+        .footer-social img {
+            height: 28px;
+            margin-left: 0.5em;
+        }

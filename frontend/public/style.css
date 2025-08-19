@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Jost", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('./images/bgimg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.back-arrow {
+    top: 20px;
+    left: 20px;
+        position: fixed;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: 2px solid black;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        z-index: 1000; /* keep it on top */
+        background: white; /* optional for clarity */
+        
+} 
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+.todo-list{
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: green;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px);
+}
+.todo-list h1{
+    font-size: 2rem;
+}
+
+.stat-container{
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(38, 123, 21, 0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.details{
+    width: 100%;
+}
+.details h3{
+    color: green;
+}
+#progressbar{
+    width: 100%;
+    height: 7px;
+    background: lightpink;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 15px;
+}
+#progress{
+    width: 50%;
+    height: 100%;
+    background: palevioletred;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+#numbers{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background:palevioletred;
+    border:lightpink 2px solid;
+    font-weight: bold ;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+    
+.input-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.input-area input{
+    float: 1;
+    padding: 10px 17px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    background: white;
+    color: rgb(53, 85, 53);
+}
+.input-area input::placeholder{
+    color: gray;
+}
+.input-area button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.1rem;
+    background: green;
+    border: 2px solid rgba(255,255,255,0.18);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.input-area button:hover{
+    transform: scale(1.1);
+    background: rgb(78, 221, 119);
+}
+.todos-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#task-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(189, 231, 189);
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color:rgb(2, 113, 2);
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}  
+#task-list li:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#task-list li .checkbox{
+    position: relative;
+    min-width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#task-list li .checkbox:checked{
+    background: rgb(2, 55, 26);
+    transform: scale(1.1);
+}
+#task-list li .checkbox:checked::before{
+    position: absolute;
+    content: '\2713';
+    color: white;
+    top: -7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+#task-list li span{
+    flex: 1;
+    margin-left: 10px;
+    word-wrap: break-word;
+}
+#task-list li.completed span{
+    text-decoration: 2px line-through black;
+    color: black;
+
+}
+.task-buttons{
+    display: flex;
+    gap:10px;
+    margin-right: auto;
+}
+.task-buttons button{
+    background: rgb(74, 182, 144);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.task-buttons button:hover{
+    transform: scale(1.2);
+}
+.task-buttons .edit-btn{
+    background: rgb(201, 147, 19);
+}
+.task-buttons .delete-btn{
+    background: rgb(42, 192, 19);
+}
+
+.empty-img{
+    width: 150px;
+    height: 150px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 10px;
+        margin: 0 20px;
+    }
+    .todo-list {
+        gap: 20px;
+        padding: 1.5rem;
+    }
+    #numbers {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+    .input-area input {
+        font-size: 1rem;
+    }
+    #task-list li {
+        font-size: 1rem;
+    }
+
+}

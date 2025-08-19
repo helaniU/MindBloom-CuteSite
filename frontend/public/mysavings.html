@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My Note Savings</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            margin:0 ;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        .back-arrow {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 2px solid black;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            z-index: 1000;
+            background: white;
+        }
+        .container{
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #854a4a, #cf718b, #f7c6d0);
+            color: white;
+            padding-top: 4%;
+            padding-left: 10%;
+        }
+        .container h1{
+            display: flex;
+            align-items: center;
+            font-size: 45px;
+            font-weight: bold;
+            text-shadow: 2px 4px #7f1835f5;
+        }
+        .container h1 img{
+            width: 65px;
+            height: 65px;
+            margin-right: 10px;
+        }
+        .container button{
+            display: flex;
+            align-items: center;
+            background: #7f1835f5;
+            color: white;
+            font-size: 16px;
+            outline: 0;
+            border: 0;
+            border-radius: 40px;
+            padding: 15px 25px;
+            margin: 20px 20px;
+            cursor: pointer;
+        }
+        .container button i{
+            width: 30px;
+            margin-right: 5px;
+        }
+        .container button:hover{
+            background: #c11848;
+            transition: 0.2 ease;
+        }
+        .input-box{
+            cursor: text;
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            min-height: 150px;
+            background: #f8d6d6;
+            color: #cf718b;
+            padding: 20px;
+            margin: 20px 0;
+            outline: none;
+            border-radius: 10px;
+        }
+        .input-box img{
+            width: 30px;
+            position: absolute;
+            bottom: 15px ;
+            right: 15px;
+            cursor: pointer;
+        }
+
+    </style>
+
+  </head>
+  <body>
+    <a href="/sad.html" class="back-arrow">
+        <img src="/images/backarrow.png" alt="Back" style="width:56px; height:56px;" />
+    </a>
+    <div class="container">
+        <h1><img src="/images/mynotes.png">My Notes</h1>
+        <button class="btn"><i class="fa-solid fa-marker"></i>Create Notes</button>
+        <div class="notes-container">
+            <!-- <p contenteditable=true class="input-box">
+                <img src="/images/trashbin.png">
+            </p>   -->
+        </div>
+    </div>
+    <script src="mysavingScript.js"></script>
+  </body>
+</html>

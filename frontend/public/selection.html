@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/index.css" rel="stylesheet" />
+    <title>MindBloom Mood Selection</title>
+  </head>
+  <style>
+    .back-arrow {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: 2px solid black;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        z-index: 1000; /* keep it on top */
+        background: white; /* optional for clarity */
+     }  
+  </style>
+  <body
+    class="bg-cover bg-center bg-no-repeat min-h-screen w-full"
+    style="background-image: url('/images/emoji.jpg');"
+  >
+  <a href="/dashbord.html" class="back-arrow">
+    <img src="/images/backarrow.png" alt="Back" style="width:56px; height:56px; margin-bottom: 20px;" />
+  </a>
+    <div class="relative min-h-screen flex flex-col justify-between">
+      <!-- Top Section -->
+      <div class="flex justify-between items-start px-10 pt-8">
+        <div>
+          <h1 class="text-6xl font-bold text-pink-500 drop-shadow-lg" style="margin-left: 40px;">Good Morning..!<span class="text-4xl">❤️</span></h1>
+          <!-- Daily Tip -->
+          <div class="flex justify-start mt-4 mb-4">
+            <div class="bg-white rounded-xl border-4 border-yellow-500 px-8 py-4 shadow-lg text-center max-w-2xl">
+              <div class="text-3xl font-bold font-serif text-black mb-2">MindBloom Daily Tip 💡</div>
+              <div class="text-2xl font-bold text-red-600 font-serif">
+                ✨✨ Drink 2 glasses of water and take 5 deep breaths ✨✨
+              </div>
+            </div>
+          </div>
+          <!-- Mood Selection -->
+          <div class="flex flex-col items-start">
+            <div class="text-3xl text-center font-bold text-black font-serif mb-2">Every day tells a story. How’s yours going today?</div>
+            <div class="text-2xl text-center font-bold text-black font-serif mb-6">Capture your mood, one emoji at a time! <span>🤗</span></div>
+            <div class="flex space-x-12 mb-8">
+              <a href="/good.html" class="flex flex-col items-center group">
+                <img src="/images/good.png" alt="Good" class="w-24 h-24 rounded-full shadow-lg transition-transform group-hover:scale-110" />
+                <span class="mt-2 text-xl font-bold text-black font-serif">Good</span>
+              </a>
+              <a href="/sad.html" class="flex flex-col items-center group">
+                <img src="/images/sad.png" alt="Sad" class="w-24 h-24 rounded-full shadow-lg transition-transform group-hover:scale-110" />
+                <span class="mt-2 text-xl font-bold text-black font-serif">Sad</span>
+              </a>
+              <a href="/bored.html" class="flex flex-col items-center group">
+                <img src="/images/bored.png" alt="Bored" class="w-24 h-24 rounded-full shadow-lg transition-transform group-hover:scale-110" />
+                <span class="mt-2 text-xl font-bold text-black font-serif">Bored</span>
+              </a>
+              <a href="/stressful.html" class="flex flex-col items-center group">
+                <img src="/images/stressful.png" alt="Stressful" class="w-24 h-24 rounded-full shadow-lg transition-transform group-hover:scale-110" />
+                <span class="mt-2 text-xl font-bold text-black font-serif">Stressful</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Profile Icon & Girl Image Right -->
+        <div class="flex flex-col items-end justify-start ml-10 mb-25">
+          <a href="/about-us.html" class="profile">
+            <img src="/images/profile.jpeg" alt="Profile" class="w-14 h-14 rounded-full border-2 border-black shadow-lg mb-6 " />
+          </a>
+          <img src="/images/3-removebg-preview.png" alt="Girl" class="w-80 h-100" />
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="w-full bg-pink-200/80 border-t py-3 px-8 flex justify-between items-center absolute bottom-0 left-0">
+        <div class="flex space-x-6 text-purple-900 text-lg font-serif">
+          <a href="https://www.themindfulnessapp.com/help-center">FAQ</a>
+          <a href="/about-us.html">Contact</a>
+          <a href="https://policies.google.com/privacy?hl=en-US">Privacy &amp; Terms</a>
+        </div>
+        <div class="text-purple-900 text-lg font-serif flex items-center">
+          <span class="mr-2">©</span> Copyright MindWealth 2025
+        </div>
+        <div class="flex space-x-4 items-center">
+          <span class="text-purple-900 text-lg font-serif">Follow us on</span>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+            <img src="/images/instagram.png" alt="Instagram" class="w-8 h-8" />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+            <img src="/images/Facebook.png" alt="Facebook" class="w-8 h-8" />
+          </a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener">
+            <img src="/images/Twitter.png" alt="Twitter" class="w-8 h-8" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

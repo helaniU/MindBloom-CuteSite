@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/index.css" rel="stylesheet" />
+    <title>MindBloom Sad Mood</title>
+</head>
+  <style>
+     .back-arrow {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: 2px solid black;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        z-index: 1000; /* keep it on top */
+        background: white; /* optional for clarity */
+     }  
+    .profile-icon {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: 2px solid black;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        z-index: 1000; /* keep it on top */
+        background: white; /* optional for clarity */
+    }
+    .my-saving-btn {
+        background: #fff;
+        color: #a05c5c;
+        border: 2px solid #a05c5c;
+        border-radius: 10px;
+        padding: 0.5em 1em;
+        font-size: 1em;
+        float: right;
+        margin-bottom: 1em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .my-saving-btn:hover {
+        background: #956c6c;
+        color: #fff;
+    }
+    .btn {
+        background: #fff;
+        color: #a05c5c;
+        padding-left: 10px;
+        border-radius: 20px;
+        font-size: 2rem;
+        margin-bottom: 1em;
+        text-align: center;
+        box-shadow: 0 0 10px #cfa2a2;
+        transition: all 0.3s ease; /* smooth animation */
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background: #ba8080;
+        color: #fff;
+        box-shadow: 0 0 15px #a05c5c;
+        transform: scale(1.05);
+    }
+    
+  </style>
+<body style="background-color: #8b4c4c; margin:0; font-family: 'Comic Sans MS', cursive, sans-serif;">
+    <a href="/about-us.html" class="profile-icon">
+     <img src="/images/profile.jpeg" alt="Profile" style="width:100%; height:100%; border-radius:50%;" />
+    </a>
+    <div style="display: flex; flex-direction: row; height: 100vh;">
+        <!-- Left Side Girl Image -->
+         <a href="/selection.html" class="back-arrow">
+            <img src="/images/backarrow.png" alt="Back" style="width:56px; height:56px; margin-bottom: 20px;" />
+        </a>
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+            <img src="/images/7.jpg" alt="Girl" width="500">
+        </div>
+        <!-- Middle Content -->
+        <div style="flex: 2; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <h1 style="color: #fff; font-size: 2.5em; text-align: center; margin-bottom: 0.5em; ">
+                “It's okay to feel this way. You are not alone.” ✨
+            </h1>
+            <div style="background: #f8d6d6; border-radius: 20px; padding: 2em 2em 1em 2em; box-shadow: 0 0 20px #cfa2a2;">
+
+                <h2 style="color: #a05c5c; text-align: center;">Here's a big hug for you 🤗</h2>
+                <h3 style="color: #a05c5c; text-align: center;">How are you feeling right now?</h3>
+                <textarea placeholder="Tell me and release your stress ♥" style="width: 100%; height: 60px; border-radius: 10px; border: 2px solid #a05c5c; margin: 1em 0; padding: 1em; font-size: 1em;"></textarea>
+                <a href="mysavings.html" style="text-decoration: none;">
+                    <button class="my-saving-btn">My Savings ✏️</button>
+                </a>
+            </div>
+        </div>
+        <!-- Right Side Bottle Image and Buttons -->
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <img src="/images/9-removebg-preview.png" alt="Sparkle Bottle" style="width: 220px; margin-bottom: 2em; margin-top: 100px;">
+            <a href="https://www.girlsgogames.com/" style="text-decoration: none;">
+                <div class="btn">
+                    Let's Play 👉🏻
+                </div>
+            </a>
+            <a href="https://www.youtube.com/soothingrelaxation" style="text-decoration: none;">
+                <div class="btn">
+                    Soft Music 👉🏻
+                </div>
+            </a>
+        </div>
+    </div>
+   <!-- Footer -->
+      <div class="w-full border-t py-3 px-8 flex justify-between items-center absolute left-0" style="background: rgba(174, 110, 110, 0.95);">
+        <div class="text-white text-lg font-serif flex space-x-4">
+          <a href="https://www.themindfulnessapp.com/help-center">FAQ</a>
+          <a href="/about-us.html">Contact</a>
+          <a href="https://policies.google.com/privacy?hl=en-US">Privacy &amp; Terms</a>
+        </div>
+        <div class="text-white text-lg font-serif flex items-center">
+          <span class="mr-2">©</span> Copyright MindWealth 2025
+        </div>
+        <div class="flex space-x-4 items-center">
+          <span class="text-white text-lg font-serif">Follow us on</span>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+            <img src="/images/instagram.png" alt="Instagram" class="w-8 h-8" />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+            <img src="/images/Facebook.png" alt="Facebook" class="w-8 h-8" />
+          </a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener">
+            <img src="/images/Twitter.png" alt="Twitter" class="w-8 h-8" />
+          </a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
