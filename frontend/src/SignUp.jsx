@@ -27,15 +27,17 @@ function SignUp(){
         color:"purple",
         textShadow: "2px 2px 8px #fff, 0 2px 4px #0002",
         position: "absolute",
-        top: 10,
-        left: 40,
+        top: -10,
+        left: 10,
         fontFamily: "monospace",
         fontWeight: "bold",
-        fontSize: "3.5rem",
+        fontSize: "3.7rem",
         zIndex: 10,
         margin: 0,
       }}
     >
+      <img
+      src="/Icon.png"style={{ width: 150, height: 150, marginRight: 5, }}/>
       MindBloom
     </h1>
   <div
@@ -44,7 +46,7 @@ function SignUp(){
   >
     <div
       className="d-flex flex-row justify-content-center align-items-center w-100"
-      style={{ minHeight: "100vh", marginTop:35 }}
+      style={{ minHeight: "100vh", marginTop:45 }}
     >
       {/* Left: Form Box */}
       <div

@@ -7,7 +7,10 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb+srv://nextjs929306:MO3NZnHs1gmpgydw@cluster0.goghawl.mongodb.net/MindBloom")
+const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/MindBloom";
+mongoose.connect(MONGO_URI)
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
