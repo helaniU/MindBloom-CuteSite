@@ -1,20 +1,25 @@
 import React from "react"
 import { useState } from "react";
-import axios from 'axios'
-import { Link } from "react-router-dom";
+import axios from 'axios'   //for sending HTTP requests to backend
+import { Link } from "react-router-dom";  /// Redirects user to Login page after successful signup
 import { useNavigate } from "react-router-dom";
 
 function SignUp(){
 
+   // State variables to store form input values
     const[name, setName] = React.useState("");
     const[password, setPassword] = React.useState("");
     const[email, setEmail] = React.useState ("");
+
+    // Used to navigate to login page after registration
     const navigate = useNavigate();
 
+     // Function runs when form is submitted
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault()   // Prevents page reload
+
         axios.post("http://localhost:3001/register" , {name, email, password})
-        .then(result => {console.log(result)
+        .then(result => {console.log(result)  //logs response from backend
             navigate("/login")
         })
         .catch(err => {console.log(err)})

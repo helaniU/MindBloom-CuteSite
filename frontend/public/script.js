@@ -1,27 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
+  //select all required DOM elements
     const taskInput = document.getElementById('task-input');
     const addTaskBtn = document.getElementById('add-task-btn');
     const taskList = document.getElementById('task-list');
     const emptyImage = document.querySelector('.empty-img');
     const todosContainer = document.querySelector('.todos-container');
-    const progressBar = document.querySelector('progress');
-    const progressNUmbers = document.querySelector('#numbers');
+    const progressBar = document.getElementById('progress'); // selects inner div
+    const progressNumbers = document.getElementById('numbers'); // fix typo
 
+
+    //show or hide image when task add or not
     const toggleEmptyState = () => {
         emptyImage.style.display = taskList.children.length === 0 ? 'block' : 'none';
         todosContainer.style.width = taskList.children.length > 0 ? '100%' : '50%';
     };
 
+    //update progressbar & numbers
     const updateProgress = (checkCompletion = true) => {
        const totalTasks = taskList.children.length;
        const completedTasks = taskList.querySelectorAll('.checkbox:checked').length;
 
         progressBar.max = totalTasks;
         progressBar.value = completedTasks;
-         progressNUmbers.textContent = `${completedTasks} / ${totalTasks}`;
+        
+        const percent = totalTasks === 0 ? 0 : (completedTasks / totalTasks) * 100;
+        progressBar.style.width = percent + '%'; // update the width of progressbar
+
+         progressNumbers.textContent = `${completedTasks} / ${totalTasks}`;
 
         if(checkCompletion && totalTasks > 0 && completedTasks === totalTasks){
-            Confetti();
+            Confetti(); // Fire confetti when all tasks completed
         }
         
     };
@@ -107,11 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); 
         addTask();
     });
-    taskInput.addEventListener('keypress', (event) => {
-        if(event.key === 'Enter') {
-            event.preventDefault();
-            addTask();
-        }
+    taskInput.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter') {
+        event.preventDefault();
+        addTask();
+    }
     });
 
     loadTasksFromLocalStorage();
