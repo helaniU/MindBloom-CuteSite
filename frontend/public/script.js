@@ -16,17 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     //update progressbar & numbers
+    //Count total tasks and checked tasks, calculate percentage: (completedTasks / totalTasks) * 100, 
+    // and set progressBar.style.width. Also updates progressNumbers.textContent.
     const updateProgress = (checkCompletion = true) => {
        const totalTasks = taskList.children.length;
        const completedTasks = taskList.querySelectorAll('.checkbox:checked').length;
 
         progressBar.max = totalTasks;
-        progressBar.value = completedTasks;
+        progressBar.value = completedTasks; //current progress
         
         const percent = totalTasks === 0 ? 0 : (completedTasks / totalTasks) * 100;
         progressBar.style.width = percent + '%'; // update the width of progressbar
 
-         progressNumbers.textContent = `${completedTasks} / ${totalTasks}`;
+         progressNumbers.textContent = `${completedTasks} / ${totalTasks}`; //show numbers
 
         if(checkCompletion && totalTasks > 0 && completedTasks === totalTasks){
             Confetti(); // Fire confetti when all tasks completed
@@ -34,14 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
     };
 
+  //save tasks to localstorage
     const saveTaskToLocalStorage = () => {
         const tasks = Array.from(taskList.querySelectorAll('li')).map(li => ({
             text: li.querySelector('span').textContent,
             completed: li.querySelector('.checkbox').checked
         }));
-        localStorage.setItem('tasks', JSON.stringify(tasks));
+        //saves your array of tasks into the browser in a format that can be read back later.only store strings
+        localStorage.setItem('tasks', JSON.stringify(tasks));  //converts array yo JSON
     };
 
+    //load tasks from localstorage on page load
     const loadTasksFromLocalStorage = () => {
         const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
         savedTasks.forEach(({ text, completed }) => addTask(text, completed, false));
@@ -49,11 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
         updateProgress();
     }
 
+    //Add a new task
     const addTask = (text, completed = false, checkCompletion = true) => {
         const taskText = text || taskInput.value.trim();
         if(!taskText){
             return;
         }
+        //create list items
         const li = document.createElement('li');
         li.innerHTML = ` 
         <input type="checkbox" class="checkbox" ${completed ? 'checked' : ''}>
@@ -77,26 +84,30 @@ document.addEventListener('DOMContentLoaded', () => {
             editBtn.style.opacity = '0.5';
             editBtn.style.pointerEvents = 'none';
         }
+
+        // Checkbox change event → mark completed and update progress
         checkbox.addEventListener('change', () => {
             const isChecked = checkbox.checked;
-            li.classList.toggle('completed', isChecked);
-            editBtn.disabled = isChecked;
+            li.classList.toggle('completed', isChecked); //toggle completed class
+            editBtn.disabled = isChecked;  //edit desable when completed
             editBtn.style.opacity = isChecked ? '0.5' : '1';
             editBtn.style.pointerEvents = isChecked ? 'none' : 'auto';
             updateProgress();
             saveTaskToLocalStorage();
         });
 
+        // Edit button → move task text back to input for editing
         editBtn.addEventListener('click', () => {
             if(!checkbox.checked){
                 taskInput.value = li.querySelector('span').textContent;
-                li.remove();
+                li.remove();  //remove lod task
                 toggleEmptyState();
                 updateProgress(false);
                 saveTaskToLocalStorage();
             }
         });
 
+        //Remove tasks
         li.querySelector('.delete-btn').addEventListener('click', () => {
             li.remove();
             toggleEmptyState();
@@ -104,13 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
             saveTaskToLocalStorage();
         });
 
-        taskList.appendChild(li);
-        taskInput.value = '';
+        taskList.appendChild(li); //add task to list
+        taskInput.value = '';   // clear input field
         toggleEmptyState();
         updateProgress(checkCompletion);
         saveTaskToLocalStorage();
     };
 
+    // Add task on button click or Enter key
     addTaskBtn.addEventListener('click', (event) => {
         event.preventDefault(); 
         addTask();
@@ -125,16 +137,19 @@ document.addEventListener('DOMContentLoaded', () => {
     loadTasksFromLocalStorage();
 });
 
+// Confetti animation when all tasks are completed
+//The Confetti() function uses the tsparticles library to show celebratory animation.
 const Confetti = () => {
-    const count = 100,
+    const count = 100,  //total number of confetti particles.
   defaults = {
-    origin: { y: 1 },
+    origin: { y: 1 }, //starting position
   };
 
+  //Helper function that fires a portion of confetti
 function fire(particleRatio, opts) {
   confetti(
     Object.assign({}, defaults, opts, {
-      particleCount: Math.floor(count * particleRatio),
+      particleCount: Math.floor(count * particleRatio), //generate the animation
     })
   );
 }
